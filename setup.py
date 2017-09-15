@@ -4,13 +4,13 @@ with open('README.rst') as f:
     readme = f.read()
 
 setup(
-    name='package_template',
+    name='arpym_template',
     version='0.1',
     description='A simple example of a Python package',
     long_description=readme,
-    author='Computational Modelling Group',
-    author_email='fangohr@soton.ac.uk',
-    packages=['package_template', 'package_template.tests'],
+    author='ARPM',
+    author_email='xiang.shi@arpm.co',
+    packages=['arpym_template', 'arpym_template.tests'],
     classifiers=[
         'License :: OSI Approved :: BSD License',
         'Programming Language :: Python :: 2.7',
