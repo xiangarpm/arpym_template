@@ -11,4 +11,4 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-   arith
+   flexible_probabilities

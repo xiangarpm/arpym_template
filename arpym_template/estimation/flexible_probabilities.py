@@ -4,11 +4,8 @@ import numpy as np
 from scipy.stats import norm
 
 class FlexibleProbabilities(object):
-    """Flexible Probabilities
-
-    Attributes:
-        x: 
-        p: 
+    """
+    Flexible Probabilities
     """
     def __init__(self, data):
         self.x = data
@@ -71,12 +68,14 @@ class FlexibleProbabilities(object):
         """
         This def computes the Effective Number of Scenarios of Flexible
         Probabilities via different types of defs
+        
         INPUTS
-        p       : [vector] (1 x j_) vector of Flexible Probabilities
         Type    : [struct] type of def: 'ExpEntropy', 'GenExpEntropy'
+        
         OUTPUTS
         ens     : [scalar] Effective Number of Scenarios
-        NOTE:
+        
+        NOTE
         The exponential of the entropy is set as default, otherwise
         Specify Type.ExpEntropy.on = true to use the exponential of the entropy
         or
