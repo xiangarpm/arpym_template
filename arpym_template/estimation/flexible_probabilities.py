@@ -1,7 +1,5 @@
 from collections import namedtuple
-import pandas as pd
 import numpy as np
-from scipy.stats import norm
 
 class FlexibleProbabilities(object):
     """
@@ -69,13 +67,13 @@ class FlexibleProbabilities(object):
         This def computes the Effective Number of Scenarios of Flexible
         Probabilities via different types of defs
         
-        INPUTS
-        Type    : [struct] type of def: 'ExpEntropy', 'GenExpEntropy'
+        Args:
+            Type (tuple): type of def: 'ExpEntropy', 'GenExpEntropy'
         
-        OUTPUTS
-        ens     : [scalar] Effective Number of Scenarios
+        Returns:
+            ens (double): Effective Number of Scenarios
         
-        NOTE
+        Note:
         The exponential of the entropy is set as default, otherwise
         Specify Type.ExpEntropy.on = true to use the exponential of the entropy
         or
@@ -100,4 +98,6 @@ class FlexibleProbabilities(object):
 
         return ens
         
+
+
     

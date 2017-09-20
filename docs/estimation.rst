@@ -1,13 +1,11 @@
-Documentation for the Code
+The "Checklist" - Estimation
 **************************
 
 .. automodule:: arpym_template.estimation
 
-
-useful #1 -- auto members
+Flexible probabilities
 =========================
-
-This is something I want to say that is not in the docstring.
+Flexible probabilities class
 
 .. automodule:: arpym_template.estimation.flexible_probabilities
    :members:
