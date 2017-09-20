@@ -66,7 +66,7 @@ def min_rel_entropy(fp_pri, v_ineq, mu_ineq, v_eq, mu_eq, options=None):
     return fp_pos, lg_
 
 
-def mDualLagrangian_eq(v, fp_pri, a, b):
+def mDualLagrangian_eq(v, p_pri, a, b):
     '''
     Opposite dual Lagrangian for equality constraints
     '''
@@ -77,12 +77,12 @@ def mDualLagrangian_eq(v, fp_pri, a, b):
         vt = v
     # at = a.T
 
-    p = exp(log(fp_pri.p) - 1 - vt@a)
+    p = exp(log(p_pri.p) - 1 - vt@a)
     p = maximum(p, 10**(-32))
     pt = p.T
 
     # dual Lagrangian
-    h = (log(p) - log(fp_pri))@pt + vt@(a@pt - b)
+    h = (log(p) - log(p_pri))@pt + vt@(a@pt - b)
 
     mh = -h.squeeze() # value
 
