@@ -12,6 +12,7 @@ setup(
     author_email='info@arpm.co',
     packages=['arpym_template', 
               'arpym_template.estimation',
+              'arpym_template.toolbox',
               'arpym_template.tests'],
     classifiers=[
         'Development Status :: 3 - Alpha'
