@@ -63,24 +63,25 @@ class FlexibleProbabilities(object):
 
         
     def effective_scenarios(self, Type=None):
-        """
-        This def computes the Effective Number of Scenarios of Flexible
+        """This def computes the Effective Number of Scenarios of Flexible
         Probabilities via different types of defs
         
+        For details on the exercise, please see here:
+        https://www.arpm.co/lab/redirect.php?permalink=EBEffectNbScenFun
+        
+        Note:
+        The exponential of the entropy is set as default, otherwise
+        Specify ``Type.ExpEntropy.on = true`` to use the exponential of the entropy
+        or
+        Specify ``Type.GenExpEntropy.on = true`` and supply the scalar
+        ``Type.ExpEntropy.g`` to use the generalized exponential of the entropy
+            
         Args:
-            Type (tuple): type of def: 'ExpEntropy', 'GenExpEntropy'
+            Type (tuple): type of def: ``ExpEntropy``, ``GenExpEntropy``
         
         Returns:
             ens (double): Effective Number of Scenarios
         
-        Note:
-        The exponential of the entropy is set as default, otherwise
-        Specify Type.ExpEntropy.on = true to use the exponential of the entropy
-        or
-        Specify Type.GenExpEntropy.on = true and supply the scalar
-        Type.ExpEntropy.g to use the generalized exponential of the entropy
-
-        For details on the exercise, see here: https://www.arpm.co/lab/redirect.php?permalink=EBEffectNbScenFun
         """
         if Type is None:
             Type = namedtuple('type',['Entropy'])
@@ -100,4 +101,34 @@ class FlexibleProbabilities(object):
         
 
 
+def diff_length_ml(fp, nu, threshold, smartinverse=0, maxiter=10**5):
+    """Maximum-likelihood with flexible probabilities for different-length 
+    series
     
+    For details on the exercise, please see here: 
+    https://www.arpm.co/lab/redirect.php?permalink=DiffLengthRout
+    
+    Note: We suppose the missing values, if any, are at the beginning
+        (the farthest observations in the past could be missing).
+        We reshuffle the series in a nested pattern, such that the series with 
+        the longer history comes first and the one with the shorter history 
+        comes last.
+        
+    Args:
+        fp (FlexibleProbabilities): obsrevations with flexible probabilities
+        nu (double): degrees of freedom for the multivariate Student 
+            t-distribution
+        threshold (double): convergence thresholds
+        smartinverse (double, optional): additional parameter: set it to 1 to 
+            use LRD smart inverse in the regression process
+        maxiter (int, optional): maximum number of iterations inside 
+            ``MaxLikFPTReg``
+        
+        
+    Returns:
+        mu (numpy.ndarray): DLFP estimate of the location parameter
+        sig2 (numpy.ndarray): DLFP estimate of the dispersion parameter
+    
+    """
+    return 0.0
+
