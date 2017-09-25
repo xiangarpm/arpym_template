@@ -15,6 +15,8 @@
 
 import sys
 import os
+import sphinx_rtd_theme
+
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -30,8 +32,10 @@ import os
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx.ext.autodoc',
+    'sphinx.ext.autodoc', 'sphinxcontrib.napoleon'
 ]
+
+napoleon_google_docstring = True
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -110,15 +114,30 @@ todo_include_todos = False
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'alabaster'
+html_theme = 'classic'
+#html_theme = "sphinx_rtd_theme"
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-#html_theme_options = {}
+html_theme_options = {
+    # "collapsiblesidebar": True,
+    "codebgcolor": "#F0F8FF", # light blue
+    "footerbgcolor": "#FFFFFF", # white
+    "footertextcolor": "#31847e", # ARPM green
+    "headbgcolor": "#20B2AA", # light greeen
+    "headtextcolor": "#FFFFFF", # white
+    "relbarbgcolor": "#31847e", # ARPM green
+    "relbartextcolor": "#FFFFFF", # white
+    "sidebarbgcolor": "#f1f1f1", # light grey
+    "sidebartextcolor": "#000000", # black
+    "sidebarlinkcolor": "#000000", # black
+    "linkcolor": "#043f72" # ARPM dark blue
+    
+}
 
 # Add any paths that contain custom themes here, relative to this directory.
-#html_theme_path = []
+#html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
@@ -129,7 +148,7 @@ html_theme = 'alabaster'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-#html_logo = None
+html_logo = "arpm_logo_2048x247_transparent_bg.png"
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32

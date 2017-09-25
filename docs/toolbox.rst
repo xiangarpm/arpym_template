@@ -1,11 +1,11 @@
 Quant toolbox
-**************************
-
-.. automodule:: arpym_template.toolbox
+================================
 
 View processing
-=========================
-Minimum relative entropy with flexible probabilities
+--------------------------------------------------
+
+For details, please see here:
+https://www.arpm.co/lab/redirect.php?permalink=views-processing
 
 .. automodule:: arpym_template.toolbox.min_rel_entropy
-   :members:
+    :members:

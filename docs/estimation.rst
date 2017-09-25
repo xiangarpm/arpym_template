@@ -1,11 +1,11 @@
-The "Checklist" - Estimation
-**************************
-
-.. automodule:: arpym_template.estimation
+3. Estimation
+===================================
 
 Flexible probabilities
-=========================
-Flexible probabilities class
+-----------------------------------------------------------
+
+For details, please see here:
+https://www.arpm.co/lab/redirect.php?permalink=setting-flexible-probabilities
 
 .. automodule:: arpym_template.estimation.flexible_probabilities
-   :members:
+    :members:
