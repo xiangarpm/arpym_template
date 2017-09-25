@@ -21,8 +21,9 @@ def min_rel_entropy(fp_pri, v_ineq, mu_ineq, v_eq, mu_eq, options=None):
     Returns:
         fp_pos (FlexibleProbabilities): posterior distribution
         lg_ (array) optimal parameters of dual Lagrangian
-
-    For details on the exercise, see here: https://www.arpm.co/lab/redirect.php?permalink=EB_EntropyPoolFunc
+    
+    .. _For details on the exercise, see here:
+    https://www.arpm.co/lab/redirect.php?permalink=EB_EntropyPoolFunc
     '''
     
     
@@ -77,7 +78,7 @@ def mDualLagrangian_eq(v, p_pri, a, b):
         vt = v
     # at = a.T
 
-    p = exp(log(p_pri.p) - 1 - vt@a)
+    p = exp(log(p_pri) - 1 - vt@a)
     p = maximum(p, 10**(-32))
     pt = p.T
 
