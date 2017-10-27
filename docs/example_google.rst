@@ -1,3 +1,5 @@
+.. _example_google:
+
 example\_google module
 ======================
 

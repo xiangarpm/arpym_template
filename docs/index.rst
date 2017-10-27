@@ -9,3 +9,4 @@ Contents:
    estimation
    toolbox
    example_google
+   guidelines

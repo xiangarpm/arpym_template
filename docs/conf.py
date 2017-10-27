@@ -114,27 +114,24 @@ todo_include_todos = False
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'classic'
-#html_theme = "sphinx_rtd_theme"
+# html_theme = 'classic'
+html_theme = "sphinx_rtd_theme"
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-html_theme_options = {
-    # "collapsiblesidebar": True,
-    "codebgcolor": "#F0F8FF", # light blue
-    "footerbgcolor": "#FFFFFF", # white
-    "footertextcolor": "#31847e", # ARPM green
-    "headbgcolor": "#20B2AA", # light greeen
-    "headtextcolor": "#FFFFFF", # white
-    "relbarbgcolor": "#31847e", # ARPM green
-    "relbartextcolor": "#FFFFFF", # white
-    "sidebarbgcolor": "#f1f1f1", # light grey
-    "sidebartextcolor": "#000000", # black
-    "sidebarlinkcolor": "#000000", # black
-    "linkcolor": "#043f72" # ARPM dark blue
-    
-}
+# html_theme_options = {
+#    # "collapsiblesidebar": True,
+#    "codebgcolor": "#F0F8FF", # light blue
+#    "footerbgcolor": "#FFFFFF", # white
+#    "footertextcolor": "#31847e", # ARPM green
+#    "headtextcolor": "#FFFFFF", # white
+#    "relbarbgcolor": "#31847e", # ARPM green
+#    "sidebarbgcolor": "#f1f1f1", # light grey
+#    "sidebartextcolor": "#000000", # black
+#    "sidebarlinkcolor": "#000000", # black
+#    "linkcolor": "#043f72" # ARPM dark blue
+#}
 
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
